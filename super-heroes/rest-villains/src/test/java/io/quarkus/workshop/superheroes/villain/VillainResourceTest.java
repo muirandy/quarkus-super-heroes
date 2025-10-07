@@ -201,4 +201,9 @@ public class VillainResourceTest {
         };
     }
 
+    @Test
+    void shouldPingOpenAPI() {
+        given().header(ACCEPT, JSON).when().get("/q/openapi").then().statusCode(OK.getStatusCode());
+    }
+
 }
